@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-princiapal: "Permanent Marker";
+    --font-secundaria: "Shadows Into Light Two";
+    --font-tercearia: "Roboto";
+    --cor-principal: rgb(48, 241, 23);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1 {
+    font-family: var(--font-princiapal);
+    color: var(--cor-principal) !important;
+    font-size: 4rem !important;
+}
+h2 {
+    font-family: var(--font-tercearia);
+    color: var(--main-color) !important;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+ul li {
+    list-style: none;
+    /* max-width: 240px;
+    min-width: 180px; */
+    height: auto;
+    padding: 8px;
+}
+img {
+    max-width: 150px;
+    height: auto;
+}
+.g-10 {
+    gap: 10px !important;
+}
+
+#app .div-form {
+    padding: 30px;
+}
+#app .div-form .form {
+    padding: 20px;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(1, 87, 1);
+    box-shadow: 2px 2px  rgb(1, 87, 1);
+  }
+
+#app .div-form .form .title-h1 {
+    align-items: center;
+}
+  
+#app .div-form .form .text-gradient {
+    background: linear-gradient(
+            to right,
+            #53cd63 20%,
+            #70fa00 30%,
+            #01cd4f 70%,
+            #19d451 80%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 500% auto;
+        animation: textShine 5s ease-in-out infinite alternate;
+    
+    }
+    @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+#app .div-form .form .ft-sec {
+        font-family: var(--font-secundaria) !important;
+        color: rgb(32, 32, 32) !important;
+    }
+#app .div-form .form .div-input .input-name {
+    border: none;
+    border-bottom: 1px solid green;
+    background: transparent;
+    transition: .4s;
+}
+#app .div-form .form .div-input .input-name:focus-visible {
+    border: none;
+    border-bottom: 1px solid rgb(1, 87, 1);
+    transition: .4s;
+    outline: none;
+}
+#app .div-form .form .div-input .select {
+    background: transparent;
+    border: 1px solid rgb(1, 87, 1);
+    outline: none;
+    cursor: pointer;
+}
+.animation-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--cor-principal);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+.animation-button i {
+    position: absolute;
+    width: 24px;
+    fill: var(--cor-principal);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+.animation-button .arr-1 {
+    right: 16px;
+  }
+.animation-button .arr-2 {
+    left: -25%;
+  }
+.animation-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #47974e41;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+.animation-button .text {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-tercearia);
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+.animation-button:hover .arr-1 {
+    right: -25%;
+  }
+.animation-button:hover .arr-2 {
+    left: 16px;
+  }
+.animation-button:hover .text {
+    transform: translateX(12px);
+  }
+.animation-button:hover i {
+    fill: var(--cor-principal);
+  }
+.animation-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgba(42, 226, 88, 0.185);
+  }
+.animation-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+#app .div-form .form .div-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+#app .list-character .li-card .card {
+    width: 220px;
+    background: rgb(245, 245, 245);
+    border: 1px solid var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 35px;
+    gap: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.123);
+    border-radius: 20px;
+    transition: .4s;
+  }
+#app .list-character .li-card .character-image .character-image-perfil {
+    border-radius: 50%;
+    transition: .4s;
+  }
+#app .list-character .li-card .card .info-dates .p-card {
+    color: rgb(133, 133, 133);
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    transition: .4s;
+  }
+#app .list-character .li-card .card:hover {
+    background: var(--cor-principal);
+    border: 1px solid black;
+    transition: .4s;
+}
+#app .list-character .li-card .card:hover .character-image .character-image-perfil {
+    transform: scale(1.08);
+    transition: .4s;
+}   
+#app .list-character .li-card .card:hover .p-card {
+    color: rgb(0, 0, 0);
+    transition: .4s;   
+}
+
+
